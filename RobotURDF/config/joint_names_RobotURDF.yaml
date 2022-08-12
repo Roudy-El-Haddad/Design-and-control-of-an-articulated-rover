@@ -1,0 +1,60 @@
+  # Parameters
+  parameters:
+    rate: &rate 50
+    p_value: &k_p 10
+    i_value: &k_i 0.1
+    d_value: &k_d 1
+    wheel_pid: &vel_pid {p: 1.0, i: 0.1, d: 0.0}
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: *rate
+  # Effort Controllers -- Position and Velocity ----------------
+  # Left Leg Controllers -----------------
+  # Left Hip Controller
+  LeftHip_controller:
+    type: effort_controllers/JointPositionController
+    joint: LeftHip_joint
+    pid: {p: *k_p, i: *k_i, d: *k_d}
+  # Left Knee Controller
+  LeftKnee_controller:
+    type: effort_controllers/JointPositionController
+    joint: LeftKnee_joint
+    pid: {p: *k_p, i: *k_i, d: *k_d}
+  # Left wheel joint Controller
+  LeftWheel_controller:
+    type: effort_controllers/JointVelocityController
+    joint: LeftWheel_joint
+    pid: *vel_pid
+  # Front Leg Controllers -----------------
+  # Front Hip Controller
+  FrontHip_controller:
+    type: effort_controllers/JointPositionController
+    joint: FrontHip_joint
+    pid: {p: *k_p, i: *k_i, d: *k_d}
+  # Front Knee Controller
+  FrontKnee_controller:
+    type: effort_controllers/JointPositionController
+    joint: FrontKnee_joint
+    pid: {p: *k_p, i: *k_i, d: *k_d}
+  # Front wheel joint Controller
+  FrontWheel_controller:
+    type: effort_controllers/JointVelocityController
+    joint: FrontWheel_joint
+    pid: *vel_pid
+  # Right Leg Controllers -----------------
+  # Right Hip Controller
+  RightHip_controller:
+    type: effort_controllers/JointPositionController
+    joint: RightHip_joint
+    pid: {p: *k_p, i: *k_i, d: *k_d}
+  # Right Knee Controller
+  RightKnee_controller:
+    type: effort_controllers/JointPositionController
+    joint: RightKnee_joint
+    pid: {p: *k_p, i: *k_i, d: *k_d}
+  # Right wheel joint Controller
+  RightWheel_controller:
+    type: effort_controllers/JointVelocityController
+    joint: RightWheel_joint
+    pid: *vel_pid

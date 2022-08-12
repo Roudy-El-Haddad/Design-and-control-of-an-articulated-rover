@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- our urdf model -->
+  <arg name="model" value="$(find RobotURDF)/urdf/RobotURDF.urdf"/>
+
+  <!-- Load robot description from URDF file -->
+  <!-- load our urdf model (string) into global parameter called "robot_description"-->
+  <param name="robot_description" command="cat $(find RobotURDF)/urdf/RobotURDF.urdf" />
+
+  <!-- We use empty_world.launch to start gazebo, specifically, gazebo and the empty_world environement -->
+  <!-- We can change the environement launched by changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="debug" value="false" />
+    <arg name="gui" value="true" />
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="headless" value="false"/>
+  </include>
+
+
+  <!-- Spawn our robot using urdf_spawner node -->
+  <node name="urdf_spawner"
+        pkg="gazebo_ros"
+        type="spawn_model"
+        respawn="false"
+        output="screen"
+        args="-z 0.4425
+              -unpause
+              -urdf
+              -model robot
+              -param robot_description"/>
+
+  <!-- load multiple values stored in .yaml file into global parameters -->
+  <!-- parameters store motor controller configurations -->
+  <rosparam command="load"
+            file="$(find RobotURDF)/config/control_config_PID.yaml" />
+  
+  <!-- Spawn controllers -->
+  <node name="bot_controller_spawner"
+        pkg="controller_manager"
+        type="spawner"
+        ns="/RobotURDF"
+        args="joint_state_controller
+              LeftHip_controller
+              LeftKnee_controller
+              LeftWheel_controller
+              FrontHip_controller
+              FrontKnee_controller
+              FrontWheel_controller
+              RightHip_controller
+              RightKnee_controller
+              RightWheel_controller" />
+
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+    <remap from="/joint_states" to="/RobotURDF/joint_states" />
+  </node>
+  <!-- Show in Rviz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find RobotURDF)/urdf.rviz"/>
+</launch>

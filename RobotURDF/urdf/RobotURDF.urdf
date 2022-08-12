@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="RobotURDF">
+
+<!-- Links -->
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="13.248" />
+      <inertia
+        ixx="0.11898"
+        ixy="3.3312E-06"
+        ixz="2.2815E-05"
+        iyy="0.08179"
+        iyz="7.645E-07"
+        izz="0.1793" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="RightHip_Link">
+    <inertial>
+      <origin
+        xyz="0.02006 0.0018989 -0.0014179"
+        rpy="0 0 0" />
+      <mass
+        value="2.2246" />
+      <inertia
+        ixx="0.0016906"
+        ixy="-0.00028648"
+        ixz="2.4229E-06"
+        iyy="0.0050451"
+        iyz="2.0718E-06"
+        izz="0.0061125" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/R_HFE_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/R_HFE_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="RightKnee_Link">
+    <inertial>
+      <origin
+        xyz="0.11637 -0.00010065 2.6945E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.26283" />
+      <inertia
+        ixx="0.00019876"
+        ixy="1.5906E-07"
+        ixz="-3.583E-11"
+        iyy="0.00060211"
+        iyz="-2.1512E-11"
+        izz="0.0004548" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/R_KFE_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.1098 0.94118 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/R_KFE_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="RightWheel_Link">
+    <inertial>
+      <origin
+        xyz="9.2705E-05 -0.00037961 0.00038182"
+        rpy="0 0 0" />
+      <mass
+        value="1.5614" />
+      <inertia
+        ixx="0.0018287"
+        ixy="-4.8963E-06"
+        ixz="-5.5018E-07"
+        iyy="0.0018475"
+        iyz="2.2527E-06"
+        izz="0.0033571" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/R_WHEEL_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/R_WHEEL_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="FrontHip_Link">
+    <inertial>
+      <origin
+        xyz="0.02006 0.0018989 -0.0014179"
+        rpy="0 0 0" />
+      <mass
+        value="2.2246" />
+      <inertia
+        ixx="0.0016906"
+        ixy="-0.00028648"
+        ixz="2.4229E-06"
+        iyy="0.0050451"
+        iyz="2.0718E-06"
+        izz="0.0061125" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/F_HFE_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/F_HFE_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="FrontKnee_Link">
+    <inertial>
+      <origin
+        xyz="0.11637 -0.00010065 2.6945E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.26283" />
+      <inertia
+        ixx="0.00019876"
+        ixy="1.5906E-07"
+        ixz="-3.583E-11"
+        iyy="0.00060211"
+        iyz="-2.1512E-11"
+        izz="0.0004548" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/F_KFE_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.1098 0.94118 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/F_KFE_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="FrontWheel_Link">
+    <inertial>
+      <origin
+        xyz="9.2705E-05 -0.00037961 0.00038182"
+        rpy="0 0 0" />
+      <mass
+        value="1.5614" />
+      <inertia
+        ixx="0.0018287"
+        ixy="-4.8963E-06"
+        ixz="-5.5018E-07"
+        iyy="0.0018475"
+        iyz="2.2527E-06"
+        izz="0.0033571" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/F_WHEEL_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/F_WHEEL_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="LeftHip_Link">
+    <inertial>
+      <origin
+        xyz="0.02006 0.0018989 -0.0014179"
+        rpy="0 0 0" />
+      <mass
+        value="2.2246" />
+      <inertia
+        ixx="0.0016906"
+        ixy="-0.00028648"
+        ixz="2.4229E-06"
+        iyy="0.0050451"
+        iyz="2.0718E-06"
+        izz="0.0061125" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/L_HFE_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/L_HFE_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="LeftKnee_Link">
+    <inertial>
+      <origin
+        xyz="0.11637 -0.00010065 2.6945E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.26283" />
+      <inertia
+        ixx="0.00019876"
+        ixy="1.5906E-07"
+        ixz="-3.583E-11"
+        iyy="0.00060211"
+        iyz="-2.1512E-11"
+        izz="0.0004548" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/L_KFE_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.1098 0.94118 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/L_KFE_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="LeftWheel_Link">
+    <inertial>
+      <origin
+        xyz="9.2704E-05 -0.00037961 0.00038182"
+        rpy="0 0 0" />
+      <mass
+        value="1.5614" />
+      <inertia
+        ixx="0.0018287"
+        ixy="-4.8963E-06"
+        ixz="-5.5018E-07"
+        iyy="0.0018475"
+        iyz="2.2527E-06"
+        izz="0.0033571" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/L_WHEEL_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RobotURDF/meshes/L_WHEEL_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <!-- Joints -->
+  <joint
+    name="RightHip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.17101 -0.151 -0.062"
+
+      rpy="1.5708 0.67423 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="RightHip_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="100" />
+  </joint>
+
+  <joint
+    name="RightKnee_joint"
+    type="revolute">
+    <origin
+      xyz="0.21 0 0"
+      rpy="0 0 -1.7042" />
+    <parent
+      link="RightHip_Link" />
+    <child
+      link="RightKnee_Link" />
+
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="100" />
+  </joint>
+
+  <joint
+    name="RightWheel_joint"
+    type="continuous">
+
+    <origin
+
+      xyz="0.227 0 8.0621E-05"
+
+      rpy="0 0 -2.3339" />
+
+    <parent
+
+      link="RightKnee_Link" />
+
+    <child
+
+      link="RightWheel_Link" />
+
+    <axis
+
+      xyz="0 0 -1" />
+
+  </joint> 
+
+  <joint
+    name="FrontHip_joint"
+    type="revolute">
+    <origin
+      xyz="0.16399 0 -0.062"
+      rpy="1.5708 0.67423 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="FrontHip_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="100" />
+  </joint>
+
+  <joint
+    name="FrontKnee_joint"
+    type="revolute">
+    <origin
+      xyz="0.21 0 0"
+      rpy="0 0 -1.7042" />
+    <parent
+      link="FrontHip_Link" />
+    <child
+      link="FrontKnee_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="100" />
+  </joint>
+
+  <joint
+    name="FrontWheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.227 0 8.0621E-05"
+      rpy="0 0 -2.3339" />
+    <parent
+      link="FrontKnee_Link" />
+    <child
+      link="FrontWheel_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+
+  <joint
+    name="LeftHip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.17101 0.151 -0.062"
+      rpy="1.5708 0.67423 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="LeftHip_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="100" />
+  </joint>
+
+  <joint
+    name="LeftKnee_joint"
+    type="revolute">
+    <origin
+      xyz="0.21 0 0"
+      rpy="0 0 -1.7042" />
+    <parent
+      link="LeftHip_Link" />
+    <child
+      link="LeftKnee_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="100" />
+  </joint>
+
+  <joint
+    name="LeftWheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.227 0 8.0621E-05"
+      rpy="0 0 -2.3339" />
+    <parent
+      link="LeftKnee_Link" />
+    <child
+      link="LeftWheel_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+
+
+  <!-- Transmissions -->
+  <transmission name="LeftHip_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LeftHip_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="LeftHip_actuator">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="LeftKnee_transmission">
+    <type>hardware_interface/transmission_interface/SimpleTransmission</type>
+    <joint name="LeftKnee_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="LeftKnee_actuator">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="LeftWheel_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LeftWheel_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="LeftWheel_actuator">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="FrontHip_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FrontHip_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FrontHip_actuator">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="FrontKnee_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FrontKnee_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FrontKnee_actuator">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="FrontWheel_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FrontWheel_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FrontWheel_actuator">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="RightHip_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RightHip_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RightHip_actuator">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="RightKnee_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RightKnee_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RightKnee_actuator">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="RightWheel_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RightWheel_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RightWheel_actuator">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- Enable self collision to prevent the robot from passing through itself -->
+  <gazebo>
+    <self_collide>1</self_collide>
+  </gazebo>
+
+
+
+  <!-- Gazebo -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/RobotURDF</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+<!-- Contact -->
+<gazebo reference="RightWheel_Link">
+  <mu1>90000</mu1>
+  <mu2>90000</mu2>
+  <kp>1000000.0</kp>
+  <kd>10.0</kd>
+  <minDepth>0.001</minDepth>
+  <!-- <maxContacts>1</maxContacts> -->
+</gazebo>
+<gazebo reference="FrontWheel_Link">
+  <mu1>90000</mu1>
+  <mu2>90000</mu2>
+  <kp>1000000.0</kp>
+  <kd>10.0</kd>
+  <minDepth>0.001</minDepth>
+  <!-- <maxContacts>1</maxContacts> -->
+</gazebo>
+<gazebo reference="LeftWheel_Link">
+  <mu1>90000</mu1>
+  <mu2>90000</mu2>
+  <kp>1000000.0</kp>
+  <kd>10.0</kd>
+  <minDepth>0.001</minDepth>
+  <!-- <maxContacts>1</maxContacts> -->
+</gazebo>
+
+<!-- Sensors --> 
+  <gazebo>
+    <plugin name="towr_gps" filename="libhector_gazebo_ros_gps.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>1000</updateRate>
+      <bodyName>base_link</bodyName> <!-- must be the link of the gps device -->
+      <frameId>base_link</frameId>
+      <topicName>/RobotURDF/GPS/fix</topicName>
+      <!-- Robotnik position at Fuente del Jarro -->
+      <referenceLatitude>0</referenceLatitude>
+      <referenceLongitude>0</referenceLongitude>
+      <!-- To set heading in ENU orientation (degrees) -->
+      <!-- <referenceHeading>90</referenceHeading> -->
+      <velocityTopicName>/RobotURDF/GPS/fix_velocity</velocityTopicName>
+      <drift>0.0 0.0 0.0</drift>
+      <!--<drift>0.0001 0.0001 0.0001</drift>-->
+      <!--<drift>0.3 0.3 0.3</drift>-->
+      <gaussianNoise>0.0 0.0 0.0</gaussianNoise>
+      <!--<gaussianNoise>0.00001 0.00001 0.00001</gaussianNoise>-->
+      <velocityDrift>0.00000 0.00000 0.00000</velocityDrift>
+      <!--<velocityGaussianNoise>0.1 0.1 0.1</velocityGaussianNoise>-->
+      <velocityGaussianNoise>0.00000 0.00000 0.00000</velocityGaussianNoise>
+      <ignoreTfPrefix>1</ignoreTfPrefix>
+    </plugin>
+  </gazebo>
+
+    <gazebo>
+      <plugin filename="libhector_gazebo_ros_imu.so" name="gazebo_ros_imu">
+        <alwaysOn>true</alwaysOn>
+        <bodyName>base_link</bodyName>
+        <updateRate>1000</updateRate>
+        <serviceName>/RobotURDF/imu_service</serviceName>
+        <topicName>/RobotURDF/imu</topicName>
+        <gaussianNoise>0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+      </plugin>
+    </gazebo>
+
+    <gazebo>
+      <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>1000</updateRate>
+      <bodyName>base_link</bodyName>
+      <topicName>/RobotURDF/base_pose_ground_truth</topicName>
+      <gaussianNoise>0</gaussianNoise>
+      <!--<frameName>/map</frameName>-->
+       <xyzOffsets>0 0 0</xyzOffsets>
+      <rpyOffsets>0 0 0</rpyOffsets>
+      </plugin>
+   </gazebo>
+
+</robot>
